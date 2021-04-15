@@ -257,6 +257,9 @@ x86_emulate_cpuid(struct vm *vm, int vcpu_id,
 			 */
 			regs[2] &= ~((unsigned) CPUID2_TSCDLT);
 
+			// No PCID
+			regs[2] &= ~((unsigned) CPUID2_PCID);
+
 			/*
 			 * Hide thermal monitoring
 			 */
